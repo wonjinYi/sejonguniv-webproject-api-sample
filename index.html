@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>API SAMPLE</title>
+  </head>
+  <body>
+    <!-- POST -->
+    <div style="border: 2px solid black">
+      <h2>POST (Send ranking data to Ranking Server)</h2>
+      <ul>
+        <h3>below value are allowed.</h3>
+        <li>gamename : firevoid / guessingNumber / diceGame / findingMine / aimPractice</li>
+        <li>username : "String you want"</li>
+        <li>score : "Positive Integer"</li>
+      </ul>
+
+      <input id="post-gamename" placeholder="gamename" />
+      <input id="post-username" placeholder="username" />
+      <input id="post-score" placeholder="score" />
+      <button onclick="doPOST()">SEND Data to Server</button>
+      <p id="post-text">This is text for POST.</p>
+    </div>
+
+    <!-- GET -->
+    <div style="border: 2px solid black">
+      <h2>GET (Receive ranking data from Ranking Server)</h2>
+      <ul>
+        <h3>below value are allowed.</h3>
+        <li>gamename : all / firevoid / guessingNumber / diceGame / findingMine / aimPractice</li>
+        <li>getNumber : "Positive Integer" (The number of datas you want to get)</li>
+        <li>sorMethod : ascending / descending</li>
+      </ul>
+
+      <input id="get-gamename" placeholder="gamename" />
+      <input id="get-number" placeholder="getNumber" style="width: 300px" />
+      <input id="get-sortmethod" placeholder="sortMethod" />
+      <button onclick="doGET()">Get Data from server</button>
+      <p id="get-text">This is text for GET.</p>
+    </div>
+
+    <h1>Please Open Console By Pressing [F12]</h1>
+
+    <!-- script -->
+    <script src="./POST.js"></script>
+    <script src="./GET.js"></script>
+  </body>
+</html>
