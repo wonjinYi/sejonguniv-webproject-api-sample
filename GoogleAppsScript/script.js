@@ -90,7 +90,7 @@ function makeResultRequestedByGET(data, params) {
 
   // [3.] sort 'result.(gamename)' by params.sortMethod ---
   const sortExp = {
-    aescending: (a, b) => a.score - b.score,
+    ascending: (a, b) => a.score - b.score,
     descending: (a, b) => b.score - a.score,
   };
   target.forEach((key) => result[key].sort(sortExp[params.sortMethod]));
