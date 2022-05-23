@@ -21,7 +21,7 @@ async function doPOST() {
   if (
     $gamename.value.trim() == false ||
     $username.value.trim() == false ||
-    $score.value.trim() == false
+    ($score.value.trim() == false && $score.value.trim() != 0)
   ) {
     alert("Please fill the <input>");
     return;
