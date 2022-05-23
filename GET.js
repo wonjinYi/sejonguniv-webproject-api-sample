@@ -1,6 +1,6 @@
 async function getData(params) {
   const baseURL =
-    "https://script.google.com/macros/s/AKfycbwSiezrpRCWE7z4bhgVERa5a9PR_BxR1enY_50LCUyFXh1nbZznxihiFrYYaAl05LnKsw/exec";
+    "https://script.google.com/macros/s/AKfycbyaY8lg8Ba_0oh3I5Q-X6HReYwStOwIYVhOjBK-zk1bvhWs9BKL2bi17-GEpvjUI5pyhA/exec";
   const { gamename, getNumber, sortMethod } = params;
 
   const res = await fetch(
