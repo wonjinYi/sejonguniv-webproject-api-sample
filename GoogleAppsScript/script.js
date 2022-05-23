@@ -1,5 +1,4 @@
 // code.gs
-
 const HEADER = ["id", "game", "username", "score"];
 const STATUS = { success: "success", fail: "fail" };
 const SORT_METHOD = { ascending: "ascending", descending: "descending" };
@@ -122,7 +121,8 @@ function doPost(e) {
     if (postData.username == false) throw new Error(`Invalid username : ${postData.username}`);
     else if (!GAMES_KEY.includes(postData.gamename))
       throw new Error(`Invalid gamename : ${postData.gamename}`);
-    else if (!parseInt(postData.score)) throw new Error(`Invalid score : ${postData.score}`);
+    else if (!parseInt(postData.score) && parseInt(postData.score) != 0)
+      throw new Error(`Invalid score : ${postData.score}`);
 
     // For TEST ▼
     // const postData = {
